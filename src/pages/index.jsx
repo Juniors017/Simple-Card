@@ -22,7 +22,7 @@ function HomepageHeader() {
       <div className=""></div>
     </div>
     <div className="col col--3 text--center padding-horiz--xs">
-      <div className="" > <img src="./img/timeline.png" style={{borderRadius:'50%'}} className="item shadow--tl"></img></div>
+      <div className="" > <img src="./img/docux.png" style={{borderRadius:'50%'}} className="item shadow--tl"></img></div>
    
     </div> 
     <div className="col col--6 text--center  ">

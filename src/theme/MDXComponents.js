@@ -6,7 +6,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import DocusaurusButton from '@site/src/components/DocusaurusButton';
 
-
 export default {
   // Réutilise la correspondance par défaut
   ...MDXComponents,
@@ -18,5 +17,5 @@ export default {
   TabItem,
   Tabs,
   DocusaurusButton,
-  
+
 };

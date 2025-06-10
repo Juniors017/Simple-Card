@@ -6,26 +6,28 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Docux',
+  title: 'My Site',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/docux.png',
-
+  favicon: 'img/favicon.ico',
+  
   organizationName: 'Juniors017', // Usually your GitHub org/user name.
-  projectName: 'simple-card', // Usually your repo name.
+  projectName: 'Simple-Card', // Usually your repo name.
   url: 'https://Juniors017.github.io',
-  baseUrl: '/simple-card/',
+  baseUrl: 'Simple-Card',
 
 
 
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
-
- // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
+
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -47,7 +49,21 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-       
+        blog: {
+          showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // Useful options to enforce blogging best practices
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -59,27 +75,25 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docux.png',
+      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Docux',
+        title: 'My Site',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/docux.png',
+          src: 'img/logo.svg',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'componentName',
+            label: 'Tutorial',
           },
-          
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            to: 'https://github.com/Juniors017?tab=repositories',
-            label: 'GitHub',nName: 'Docux', // Usually your GitHub org/user name.
-  projectName: 'Docux', // Usually your repo name.
-
-            position: 'left',
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
       },
@@ -87,50 +101,46 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: ' ',
+            title: 'Docs',
             items: [
               {
-                label: 'Docusaurus',
-                to: 'https://docusaurus.io/',
+                label: 'Tutorial',
+                to: '/docs/intro',
               },
-              
-            ],
-          },
-
-          {
-            title: ' ',
-            items: [
-              {
-                label: 'Docusaurus.community',
-                to: 'https://docusaurus.community/',
-              },
-              
-            ],
-          },
-
-          {
-            title: ' ',
-            items: [
-              {
-                label: 'Docux',
-                to: 'https://github.com/Juniors017?tab=repositories',
-              },
-              
             ],
           },
           {
-            title: ' ',
+            title: 'Community',
             items: [
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
               {
                 label: 'Discord',
-                to: 'https://discord.com/channels/398180168688074762/867060369087922187',
+                href: 'https://discordapp.com/invite/docusaurus',
               },
-              
+              {
+                label: 'X',
+                href: 'https://x.com/docusaurus',
+              },
             ],
           },
-          
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
+              },
+            ],
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Docux Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

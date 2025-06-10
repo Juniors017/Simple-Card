@@ -73,25 +73,25 @@ export default {
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
-      "title": "My Site",
+      "title": "Docux",
       "logo": {
         "alt": "My Site Logo",
-        "src": "img/logo.svg"
+        "src": "img/docux.png"
       },
       "items": [
         {
           "type": "docSidebar",
           "sidebarId": "tutorialSidebar",
           "position": "left",
-          "label": "Tutorial"
+          "label": "Simple-Card"
         },
         {
           "to": "/blog",
           "label": "Blog",
-          "position": "left"
+          "position": "right"
         },
         {
-          "href": "https://github.com/facebook/docusaurus",
+          "to": "https://github.com/Juniors017/Simple-Card",
           "label": "GitHub",
           "position": "right"
         }
@@ -105,7 +105,7 @@ export default {
           "title": "Docs",
           "items": [
             {
-              "label": "Tutorial",
+              "label": "Simple Card Component",
               "to": "/docs/intro"
             }
           ]
@@ -136,7 +136,7 @@ export default {
             },
             {
               "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "to": "https://github.com/Juniors017/Simple-Card"
             }
           ]
         }

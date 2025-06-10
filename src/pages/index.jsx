@@ -21,12 +21,12 @@ function HomepageHeader() {
     <div className="col col--1">
       <div className=""></div>
     </div>
-    <div className="col col--3 text--center padding-horiz--md">
-      <div className="" > <img src="./img/docux.png" style={{borderRadius:'50%'}}></img></div>
+    <div className="col col--3 text--center padding-horiz--xs">
+      <div className="" > <img src="./img/timeline.png" style={{borderRadius:'50%'}} className="item shadow--tl"></img></div>
    
     </div> 
     <div className="col col--6 text--center  ">
-      <div className=" padding-vert--xl"><h1 className="hero__title ">Bienvenue</h1>
+      <div className=" padding-vert--md"><h1 className="hero__title ">Simple Card by @Docux</h1>
             <p className="hero__subtitle">Cet espace est dédié à mon exploration de docusaurus </p>
             <p className="">Ici vous retrouvez toutes les infos sur developpement et recherche ainsi que mes notes </p></div>
             
@@ -48,23 +48,23 @@ export default function Home() {
     <Layout>
       <HomepageHeader />
       <main>
-      <div className='homebody padding-vert--lg'>
+        <div className='homebody padding-vert--lg'>
       <div className="container margin-top--lg">
   <div className="row">
     
-    <div className="col ">
-      <div className=""></div>
-    </div>
+   
+    <div className="col  text--justify ">
     
-    <div className="col  text--center  ">
-      <div className=" padding-vert--xl"><h1 className="hero__title ">Description of xxx components</h1>
-            <p className="hero__subtitle">hero__subtitle</p>
-            <p className="">test  xx </p></div>
+            <p className="hero__subtitle">
+            Docusaurus utilizes the Infima framework for styling layout. The components described here are fully based on the Infima grid system.
+
+With this component, you will be able to easily create columns on demand according to the Infima grid. This provides great flexibility for structuring your content and creating attractive, responsive layouts. Whether you need a simple single-column layout or a complex layout with multiple columns, this component will allow you to achieve it quickly and efficiently. Harness the power of the Infima grid system to make your documentation clear, concise, and aesthetically pleasing.
+
+</p><p>@Docux</p>
+            </div>
             
-    </div>
-    <div className="col ">
-      <div className=""></div>
-    </div>
+   
+  
   </div>
 
     

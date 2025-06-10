@@ -12,19 +12,20 @@ const config = {
   tagline: 'Dinosaurs are cool',
   favicon: 'img/docux.png',
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Docusaurus-base/',
+  organizationName: 'Juniors017', // Usually your GitHub org/user name.
+  projectName: 'simple-card', // Usually your repo name.
+  url: 'https://Juniors017.github.io',
+  baseUrl: '/simple-card/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Docux', // Usually your GitHub org/user name.
-  projectName: 'Docux', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
+
+ // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  future: {
+    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -75,7 +76,9 @@ const config = {
           
           {
             to: 'https://github.com/Juniors017?tab=repositories',
-            label: 'GitHub',
+            label: 'GitHub',nName: 'Docux', // Usually your GitHub org/user name.
+  projectName: 'Docux', // Usually your repo name.
+
             position: 'left',
           },
         ],

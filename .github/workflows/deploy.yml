@@ -1,50 +1,35 @@
-name: Build and Deploy
+name: Deploy Docusaurus site to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  
+
+permissions:
+  contents: write  
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Prepare specific version of Yarn
-        run: corepack prepare yarn@4.3.1 --activate
-
+          node-version: 20  
       - name: Install dependencies
-        run: yarn install
+        run: npm ci
 
-      - name: Build project
-        run: yarn build
+      - name: Build Docusaurus site
+        run: npm run build
 
-      - name: Upload Build Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
-
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
+          force_orphan: true  
